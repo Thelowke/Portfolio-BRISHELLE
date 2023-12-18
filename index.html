@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website - Simagala</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/db80a1176644893.Y3JvcCw3ODAwLDYxMDEsOTYsMA.jpg" class ="logo" alt="name logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hello,<br> I'm <span>Ma.Brishelle Pacheco Simagala</span><br>IT Student</h1>
+                </div>
+            </div>
+        </div>
+        <!-- -----------about--------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="shell petron.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm Ma.Brishelle Pacheco Simagala, from Bacolod, cagwait, surigao del sur. As a student, i am aware of the challenges and difficulties that our family deals everyday. But i realized that in order to step up the ladder of success, i need to pursue my college degree. I'm currently enrolled as a 1st  year B.S. in Information Technology at North Eastern Mindanao State University - Cagwait Campus  </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Coding</span><br>HTML, CSS,C++</li>
+                                <li><span>Familiar Operating Systems</span><br>Simple Systems</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>May 2030 Soon</span><br>computer programmer</li>
+                                <li><span></span><br>Web Developer</li>
+                                <li><span></span><br>Network engineers</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                 <li><span>2023-2027|Bachelors in Infomation Technology</span><br>North Eastern Mindanao State University</li>
+                                 <li><span>2016-2022|High School Diploma</span><br>Unidad National High School</li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+
+            }
+
+
+        </script>
+           
+           <section class="contact" id="contact">
+               <h2>Contact</h2>
+               <p class="contact-text1">
+                   Contact Number: 09123157163
+               </p>
+               <p class="email">
+                   brishelle15@gmail.com
+               </p>
+           </section>
+
+    </body>
+</html>
